@@ -1,2 +1,2 @@
-# Python-Bioinformatic-
+# Python-Bioinformatics-
 Algoritms
