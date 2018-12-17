@@ -1,0 +1,25 @@
+def ReverseComplement(Pattern):   
+    Pattern = Reverse(Pattern) # reverse all letters in a string
+    Pattern = Complement(Pattern) # complement each letter in a string
+    return Pattern
+
+def Reverse(Pattern):
+    P=[]
+    for i in range(len(Pattern)):
+        P.append(Pattern[-(i+1)])
+        pat=''.join(P)
+    return pat
+
+def Complement(Pattern):
+    P=[]
+    for i in range(len(Pattern)):
+        if Pattern[i]=='A':
+            P.append('T')
+        elif Pattern[i]=='C':
+            P.append('G')
+        elif Pattern[i]=='G':
+            P.append('C')
+        elif Pattern[i]=='T':
+            P.append('A')
+        pat=''.join(P)
+    return pat
