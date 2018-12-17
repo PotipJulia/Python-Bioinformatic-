@@ -1,0 +1,6 @@
+def Reverse(Pattern):
+    P=[]
+    for i in range(len(Pattern)):
+        P.append(Pattern[-(i+1)])
+        pat=''.join(P)
+    return pat
