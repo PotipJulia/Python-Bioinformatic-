@@ -1,0 +1,13 @@
+def Complement(Pattern):
+    P=[]
+    for i in range(len(Pattern)):
+        if Pattern[i]=='A':
+            P.append('T')
+        elif Pattern[i]=='C':
+            P.append('G')
+        elif Pattern[i]=='G':
+            P.append('C')
+        elif Pattern[i]=='T':
+            P.append('A')
+        pat=''.join(P)
+    return pat
