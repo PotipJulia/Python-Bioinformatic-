@@ -1,0 +1,18 @@
+from Bio import SeqIO
+from Bio.SeqRecord import SeqRecord
+from Bio.Blast import NCBIWWW
+from Bio.Blast import NCBIXML
+from Bio import SearchIO
+
+my_seq=Seq('AATAGTCCT', IUPAC.unambiguous_dna)
+for index in enumerate(my_seq):
+    print("%i %s" % (index, ))
+    
+blast=NCBIWWW.qblast(program='blastn',database='nt',sequence=sequence_nucleotide)
+with open('blast_result.xml','w') as file:
+    file.write(blast.read())
+blast.close()
+
+blast_qresult = SearchIO.read("blast_result.xml", "blast-xml")
+print(blast_qresult)
+
